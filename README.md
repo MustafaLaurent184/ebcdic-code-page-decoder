@@ -48,3 +48,10 @@ U+007F). They are not printable but round-trip losslessly in *value*.
 
 `encode` raises `EncodeError` for any character not in the CP037 repertoire
 rather than substituting a placeholder. Clean your input or handle the error.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
