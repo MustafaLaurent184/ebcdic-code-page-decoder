@@ -1,6 +1,6 @@
 [project]
 name = "ebcdic-code-page-decoder"
-version = "0.1.1"
+version = "0.1.2"
 description = "Decodes and encodes using IBM EBCDIC code page 037, used for mainframe data interchange."
 requires-python = ">=3.10"
 dependencies = []
